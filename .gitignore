@@ -1,0 +1,27 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log
+
+# Angular
+dist/
+.angular/
+coverage/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
