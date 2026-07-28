@@ -1,0 +1,84 @@
+.hero {
+  min-height: 75vh;
+  background-image: url('/assets/images/hero-placeholder.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-overlay {
+  position:relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 9999px;
+
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+    }
+    .hero-overlay {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  }
+}
