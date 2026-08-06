@@ -1,17 +1,46 @@
 <nav>
-  <h2>Anmar Glass</h2>
-  <ul>
+  <a routerLink="/"><h2>Anmar Glass</h2></a>
+
+  <button class="menu-button" (click)="toggleMenu()" [class.open]="menuOpen()">
+    
+<span></span>
+<span></span>
+<span></span>
+
+  </button>
+
+  <!-- Desktop menu -->
+   <ul class="desktop-menu">
     <li>
       <a routerLink="/services">Services</a>
     </li>
+
     <li>
-      <a routerLink="/contact">Contact</a>
+      <a routerLink="/gallery">Gallery</a>
     </li>
+
     <li>
       <a routerLink="/about">About</a>
     </li>
+
     <li>
-      <a routerLink="/gallery">Gallery</a>
+      <a routerLink="/contact">Contact</a>
+    </li>
+  </ul>
+
+  <!-- Mobile menu -->
+  <ul class="mobile-menu" [class.open]="menuOpen()">
+    <li>
+      <a routerLink="/services" (click)="closeMenu()">Services</a>
+    </li>
+    <li>
+      <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+    </li>
+    <li>
+      <a routerLink="/about" (click)="closeMenu()">About</a>
+    </li>
+    <li>
+      <a routerLink="/gallery" (click)="closeMenu()">Gallery</a>
     </li>
   </ul>
 </nav>
