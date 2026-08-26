@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: 'app-hero',
+  selector: 'app-services-preview',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './hero.html',
-  styleUrl: './hero.scss',
+  templateUrl: './services-preview.html',
+  styleUrl: './services-preview.scss',
 })
-export class Hero {}
+export class ServicesPreview {}
