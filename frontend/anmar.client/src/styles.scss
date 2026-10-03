@@ -1,7 +1,57 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  color-scheme: light;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+:root {
+  // 1. Force the Button Shape to 8px
+  @include mat.button-overrides((
+    filled-container-shape: 8px
+  ));
+
+  // 2. Force Form Fields to 8px
+  @include mat.form-field-overrides((
+    outlined-container-shape: 8px,
+    filled-container-shape: 8px
+  ));
+}
+//body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+ // color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+ // background-color: var(--mat-sys-surface);
+ // color: var(--mat-sys-on-surface);
+  //font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  //margin: 0;
+  //height: 100%;
+//}
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=PT+Serif:wght@400;700&display=swap');
-*, 
-*::before, 
+*,
+*::before,
 *::after {
   box-sizing: border-box;
 }
@@ -20,4 +70,8 @@ h4 {
 }
 body.menu-open {
   overflow: hidden;
+}
+// Targets just your contact fields
+.contact-form-field {
+  @include mat.form-field-density(-4); /* Values can be 0, -1, -2, -3, -4, or -5 */
 }

@@ -1,0 +1,47 @@
+.mat-mdc-card {
+  border-radius: 0px !important;  /* Removes the rounded corners */
+  box-shadow: none !important;     /* Removes the elevation shadow */
+}
+.contact-form-content{
+    display: flex;
+    justify-content: center;
+}
+.contact-form-title{
+display: flex;
+justify-content: center;
+}
+.contact-form-card{
+    background-color: #f4f6f9;       /* Distinct soft slate background color */
+    border: 1px solid #dbe2ec;
+    border-radius: 12px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contact-form-row{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.contact-form-field{
+    flex: 1;
+    width: 100%;
+}
+/*mat-form-field.mat-mdc-form-field {
+  --mat-form-field-container-height: 40px;
+  --mat-form-field-container-vertical-padding: 4px;
+}*/
+mat-card-header{
+    display: flex;
+    justify-content: center;
+}
+.contact-form-actions{
+width: 100%;
+}
+.contact-form-button{
+    width: 100%;
+    --mat-button-filled-container-shape: 8px !important;
+}

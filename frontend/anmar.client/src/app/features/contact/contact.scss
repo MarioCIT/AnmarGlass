@@ -1,0 +1,111 @@
+.service-area-container {
+  display: flex;
+  flex-direction: column; /* Stack components vertically */
+  gap: 16px;              
+  width: 100%;
+
+  /* horizontal page margins*/
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.region-card {
+  flex: 1 1 auto;
+}
+
+.region-card mat-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.region-card mat-card-title::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  bottom: 0;
+  width: 45px;
+  height: 2px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* --- Desktop Layout Overrides --- */
+@media (min-width: 768px) {
+  .service-area-container {
+    flex-direction: row;  /* Align components side-by-side */
+  }
+
+  .region-card {
+    flex: 1;              /* Forces all 3 cards to take up equal horizontal width */
+  }
+}
+.contact-summary{
+margin-bottom: 20px;
+}
+.central-region { --accent-color: #3f51b5; } /* Tech Blue */
+.la-region { --accent-color: #009688; } /* Teal */
+.orange-county-region { --accent-color: #ff5722; } /* Coral/Orange */
+.region-card {
+
+  mat-icon {
+    color: var(--accent-color);
+  }
+}
+
+.service-section-wrapper{
+    padding-bottom: 100px;
+    background-color: #ADADAD;
+}
+
+.service-section-wrapper {
+  position: relative;
+  overflow: hidden;
+
+  background-image: url('/assets/images/contact/contact-map.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.service-section-wrapper > mat-card-header {
+  mat-card-title,
+  mat-card-subtitle {
+    color: white;
+  }
+}
+
+.service-section-wrapper > .contact-summary p {
+  color: white;
+}
+
+.service-section-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+   background: linear-gradient(
+    to right,
+    rgba(20, 75, 120, 0.85),
+    rgba(35, 95, 145, 0.55),
+    rgba(80, 135, 175, 0.25)
+  );
+}
+
+.service-section-wrapper > *:not(.map-attribution) {
+  position: relative;
+  z-index: 1;
+}
+
+.map-attribution {
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
+  z-index: 2;
+
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
